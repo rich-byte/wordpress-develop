@@ -181,7 +181,7 @@ class WP_Block_Type {
 	 * next to the "anchor" block whenever the latter is encountered.
 	 *
 	 * @since 6.4.0
-	 * @var string[]
+	 * @var array[]
 	 */
 	public $block_hooks = array();
 
@@ -242,13 +242,11 @@ class WP_Block_Type {
 	/**
 	 * Attributes supported by every block.
 	 *
-	 * @since 6.0.0 Added `lock`.
-	 * @since 6.5.0 Added `metadata`.
+	 * @since 6.0.0
 	 * @var array
 	 */
 	const GLOBAL_ATTRIBUTES = array(
-		'lock'     => array( 'type' => 'object' ),
-		'metadata' => array( 'type' => 'object' ),
+		'lock' => array( 'type' => 'object' ),
 	);
 
 	/**
@@ -299,7 +297,7 @@ class WP_Block_Type {
 	 *     @type array|null    $attributes               Block type attributes property schemas.
 	 *     @type string[]      $uses_context             Context values inherited by blocks of this type.
 	 *     @type string[]|null $provides_context         Context provided by blocks of this type.
-	 *     @type string[]      $block_hooks              Block hooks.
+	 *     @type array[]       $block_hooks              Block hooks.
 	 *     @type string[]      $editor_script_handles    Block type editor only script handles.
 	 *     @type string[]      $script_handles           Block type front end and editor script handles.
 	 *     @type string[]      $view_script_handles      Block type front end only script handles.
